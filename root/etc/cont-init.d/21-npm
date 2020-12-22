@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+source /etc/hluser
+
+cd /opt/nodejs
+npm init
+npm install express --save
