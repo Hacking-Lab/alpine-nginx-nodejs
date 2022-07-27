@@ -17,6 +17,7 @@ RUN apk add --no-cache --update \
 	chown -R node:node /opt/nodejs && \
         cd /opt/nodejs && \
         npm i && \
+        npm i express --save && \
 	rm -rf /var/cache/apk/* 
 
 #USER node
