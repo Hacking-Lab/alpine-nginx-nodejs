@@ -1,13 +1,23 @@
-# alpine-nginx-nodejs-websocketd
-Alpine Docker Image with NGINX, NodeJS, WebSocketd
-* problem: libwebsockets without -DLWS_WITH_LIBUV=ON breaks ttyd package
-* fixing the problem with https://github.com/void-linux/void-packages/issues/19441
-* fixing the problem with https://gitlab.alpinelinux.org/alpine/aports/-/issues/11936
-* fixing the problem: libwebsockets context creation failed
+# alpine-nginx-nodejs
+* nginx
+* nodejs
 
 
-Acknowledgment libwebsocket solution
-* fix is based on https://github.com/matti/docker-alpine-libwebsockets-with-libuv
+# Architecture
+```
 
-Acknowledgment ttyd 
-* https://github.com/tsl0922/ttyd
+
+
+      port:80                                port:3000
+                ┌─────────────────────┐          ┌───────────────────┐
+                │                     │          │                   │
+                │                     │          │                   │
+  ──────────────►    nginx            ├──────────►    nodejs         │
+                │                     │          │                   │
+                │                     │          │                   │
+                └─────────────────────┘          └───────────────────┘
+
+
+```
+
+

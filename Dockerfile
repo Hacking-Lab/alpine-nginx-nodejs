@@ -1,4 +1,4 @@
-FROM hackinglab/alpine-base:3.2
+FROM hackinglab/alpine-base-hl:3.2
 MAINTAINER Ivan Buetler <ivan.buetler@compass-security.com>
 
 # Add the files
@@ -13,7 +13,6 @@ RUN apk add --no-cache --update \
         openssl && \
 	addgroup -S node && adduser -S node -G node && \
 	chown -R nginx:www-data /var/lib/nginx && \
-	chown -R nginx:www-data /opt/www && \
 	chown -R node:node /opt/nodejs && \
         cd /opt/nodejs && \
         npm i && \
