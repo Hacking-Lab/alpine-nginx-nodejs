@@ -1,5 +1,3 @@
-version: '2'
-
 services:
   alpine-nginx-nodejs:
     build: .
@@ -8,7 +6,5 @@ services:
     - AUTHOR=e1
     - HL_USER_USERNAME=hacker
     - HL_USER_PASSWORD=compass
-    volumes:
-        - ./share:/opt/nodejs/
     ports:
       - 80:80
